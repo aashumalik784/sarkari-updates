@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarkari CSC 2026, Sarkari Result | Aashu Sarkari Updates</title>
-    <meta name="description" content="Sarkari Result, Sarkari CSC 2026, Admit Card, Job Notifications, Answer Keys, Yojana updates - Sab ek jagah.">
+    <title>Sarkari CSC 2026, Sarkari Result, Jobs | Aashu Sarkari Updates</title>
+    <meta name="description" content="Sarkari Result, Latest Jobs, Admit Card, Answer Key, Yojana - Official links ke saath.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -19,361 +19,71 @@
             --text-light: #757575;
             --border: #e0e0e0;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        /* Top Header Bar */
-       .top-bar {
-            background: var(--primary-dark);
-            color: #fff;
-            padding: 8px 5%;
-            font-size: 0.85rem;
-            text-align: center;
-        }
-
-        /* Main Navbar */
-       .navbar {
-            background: var(--primary);
-            padding: 0 5%;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-       .nav-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-       .logo {
-            color: #fff;
-            font-size: 1.8rem;
-            font-weight: 800;
-            text-decoration: none;
-            padding: 16px 0;
-        }
-
-       .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 0;
-        }
-
-       .nav-menu li a {
-            color: #fff;
-            text-decoration: none;
-            padding: 20px 18px;
-            display: block;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: background 0.3s;
-        }
-
-       .nav-menu li a:hover,.nav-menu li a.active {
-            background: var(--primary-dark);
-        }
-
-       .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        /* Search Box */
-       .search-box {
-            position: relative;
-        }
-
-       .search-box input {
-            padding: 10px 40px 10px 16px;
-            border: none;
-            border-radius: 4px;
-            width: 280px;
-            font-size: 0.9rem;
-        }
-
-       .search-box input:focus {
-            outline: 2px solid var(--accent);
-        }
-
-       .search-box i {
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-light);
-        }
-
-        /* Settings */
-       .settings-btn {
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.4rem;
-            cursor: pointer;
-            padding: 8px;
-        }
-
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+       .top-bar { background: var(--primary-dark); color: #fff; padding: 8px 5%; font-size: 0.85rem; text-align: center; }
+       .navbar { background: var(--primary); padding: 0 5%; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+       .nav-container { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin: 0 auto; }
+       .logo { color: #fff; font-size: 1.8rem; font-weight: 800; text-decoration: none; padding: 16px 0; }
+       .nav-menu { display: flex; list-style: none; gap: 0; }
+       .nav-menu li a { color: #fff; text-decoration: none; padding: 20px 18px; display: block; font-weight: 500; font-size: 0.95rem; transition: background 0.3s; }
+       .nav-menu li a:hover,.nav-menu li a.active { background: var(--primary-dark); }
+       .nav-right { display: flex; align-items: center; gap: 16px; }
+       .search-box { position: relative; }
+       .search-box input { padding: 10px 40px 10px 16px; border: none; border-radius: 4px; width: 280px; font-size: 0.9rem; }
+       .search-box input:focus { outline: 2px solid var(--accent); }
+       .search-box i { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--text-light); }
+       .settings-btn { background: none; border: none; color: #fff; font-size: 1.4rem; cursor: pointer; padding: 8px; }
        .hamburger { display: none; }
-
-        /* Hero Notice */
-       .hero-notice {
-            background: linear-gradient(90deg, #fff3e0, #ffe0b2);
-            border-left: 4px solid var(--accent);
-            padding: 16px 5%;
-            margin: 20px 5% 0;
-            border-radius: 6px;
-        }
-
-       .hero-notice h2 {
-            color: var(--primary-dark);
-            font-size: 1.3rem;
-            margin-bottom: 8px;
-        }
-
-       .hero-notice p {
-            color: #5d4037;
-            font-size: 0.95rem;
-        }
-
-        /* Main Content */
-       .container {
-            max-width: 1400px;
-            margin: 30px auto;
-            padding: 0 5%;
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 30px;
-        }
-
-        /* Content Boxes - SarkariCSC Style */
-       .content-box {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            margin-bottom: 24px;
-            overflow: hidden;
-        }
-
-       .box-header {
-            background: var(--primary);
-            color: #fff;
-            padding: 14px 20px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-       .box-body {
-            padding: 0;
-        }
-
-       .box-body ul {
-            list-style: none;
-        }
-
-       .box-body ul li {
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-       .box-body ul li:last-child {
-            border-bottom: none;
-        }
-
-       .box-body ul li a {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            color: var(--text);
-            transition: all 0.2s;
-        }
-
-       .box-body ul li a:hover {
-            background: #f8f9ff;
-            padding-left: 24px;
-        }
-
-       .box-body ul li a.new-badge {
-            background: var(--accent);
-            color: #fff;
-            font-size: 0.7rem;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-weight: 600;
-        }
-
-       .view-all {
-            display: block;
-            text-align: center;
-            padding: 12px;
-            background: #f5f5f5;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-       .view-all:hover {
-            background: #e8eaf6;
-        }
-
-        /* Sidebar */
-       .sidebar.content-box {
-            margin-bottom: 20px;
-        }
-
-        /* Yojana Cards Grid */
-       .yojana-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-       .yojana-card {
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-       .yojana-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-
-       .yojana-card h4 {
-            background: #e3f2fd;
-            color: var(--primary-dark);
-            padding: 12px 16px;
-            font-size: 1rem;
-        }
-
-       .yojana-card p {
-            padding: 12px 16px;
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-       .yojana-card a {
-            display: block;
-            text-align: center;
-            padding: 10px;
-            background: var(--primary);
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /* Footer */
-        footer {
-            background: #212121;
-            color: #bdbdbd;
-            padding: 40px 5% 20px;
-            margin-top: 60px;
-        }
-
-       .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 1400px;
-            margin: 0 auto 30px;
-        }
-
-       .footer-col h4 {
-            color: #fff;
-            margin-bottom: 16px;
-        }
-
-       .footer-col ul {
-            list-style: none;
-        }
-
-       .footer-col ul li {
-            margin-bottom: 10px;
-        }
-
-       .footer-col ul li a {
-            color: #bdbdbd;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-       .footer-col ul li a:hover {
-            color: #fff;
-        }
-
-       .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #424242;
-            font-size: 0.85rem;
-        }
-
-        /* Mobile */
-        @media (max-width: 1024px) {
-           .container { grid-template-columns: 1fr; }
-           .search-box input { width: 200px; }
-        }
-
-        @media (max-width: 768px) {
-           .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 70px;
-                flex-direction: column;
-                background: var(--primary);
-                width: 100%;
-                transition: left 0.3s;
-            }
-           .nav-menu.active { left: 0; }
-           .hamburger {
-                display: block;
-                background: none;
-                border: none;
-                color: #fff;
-                font-size: 1.5rem;
-            }
-           .search-box { display: none; }
-           .yojana-grid { grid-template-columns: 1fr; }
-        }
+       .hero-notice { background: linear-gradient(90deg, #fff3e0, #ffe0b2); border-left: 4px solid var(--accent); padding: 16px 5%; margin: 20px 5% 0; border-radius: 6px; }
+       .hero-notice h2 { color: var(--primary-dark); font-size: 1.3rem; margin-bottom: 8px; }
+       .hero-notice p { color: #5d4037; font-size: 0.95rem; }
+       .container { max-width: 1400px; margin: 30px auto; padding: 0 5%; display: grid; grid-template-columns: 1fr 320px; gap: 30px; }
+       .content-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 24px; overflow: hidden; }
+       .box-header { background: var(--primary); color: #fff; padding: 14px 20px; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
+       .box-body ul { list-style: none; }
+       .box-body ul li { border-bottom: 1px solid #f0f0f0; }
+       .box-body ul li:last-child { border-bottom: none; }
+       .box-body ul li a { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+       .box-body ul li a:hover { background: #f8f9ff; padding-left: 24px; }
+       .new-badge { background: var(--accent); color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+       .view-all { display: block; text-align: center; padding: 12px; background: #f5f5f5; color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+       .view-all:hover { background: #e8eaf6; }
+       .yojana-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 20px; }
+       .yojana-card { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+       .yojana-card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+       .yojana-card h4 { background: #e3f2fd; color: var(--primary-dark); padding: 12px 16px; font-size: 1rem; }
+       .yojana-card p { padding: 12px 16px; font-size: 0.9rem; color: var(--text-light); }
+       .yojana-card a { display: block; text-align: center; padding: 10px; background: var(--primary); color: #fff; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        footer { background: #212121; color: #bdbdbd; padding: 40px 5% 20px; margin-top: 60px; }
+       .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1400px; margin: 0 auto 30px; }
+       .footer-col h4 { color: #fff; margin-bottom: 16px; }
+       .footer-col ul { list-style: none; }
+       .footer-col ul li { margin-bottom: 10px; }
+       .footer-col ul li a { color: #bdbdbd; text-decoration: none; font-size: 0.9rem; }
+       .footer-col ul li a:hover { color: #fff; }
+       .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #424242; font-size: 0.85rem; }
+        @media (max-width: 1024px) { .container { grid-template-columns: 1fr; } .search-box input { width: 200px; } }
+        @media (max-width: 768px) { .nav-menu { position: fixed; left: -100%; top: 70px; flex-direction: column; background: var(--primary); width: 100%; transition: left 0.3s; } .nav-menu.active { left: 0; } .hamburger { display: block; background: none; border: none; color: #fff; font-size: 1.5rem; } .search-box { display: none; } .yojana-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
     <div class="top-bar">
-        <i class="fas fa-bullhorn"></i> Latest: SSC GD 2026 Notification Out | Railway Group D Result Declared | PM Kisan 20th Installment Date
+        <i class="fas fa-bullhorn"></i> Latest: SSC CGL 2026 Notification | Railway Group D Result | PM Kisan 20th Installment
     </div>
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">AASHU CSC</a>
+            <a href="/" class="logo">AASHU CSC</a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Sarkari Result</a></li>
-                <li><a href="#">Latest Jobs</a></li>
-                <li><a href="#">Admit Card</a></li>
-                <li><a href="#">Answer Key</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="#">Yojana</a></li>
-                <li><a href="#">CSC Services</a></li>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="https://sarkariresult.com.cm/" target="_blank">Sarkari Result</a></li>
+                <li><a href="#jobs">Latest Jobs</a></li>
+                <li><a href="#admit">Admit Card</a></li>
+                <li><a href="#answer">Answer Key</a></li>
+                <li><a href="#yojana">Yojana</a></li>
+                <li><a href="#csc">CSC Services</a></li>
             </ul>
             <div class="nav-right">
                 <div class="search-box">
@@ -388,121 +98,107 @@
 
     <div class="hero-notice">
         <h2>Why Aashu Sarkari CSC?</h2>
-        <p>Daily updates on <strong>Sarkari Naukri, Sarkari Result, Admit Card, Answer Key, Cut-off</strong> aur <strong>CSC Services</strong> jaise Aadhaar, PAN, PM Kisan - sab ek jagah, simple language me.【2463532389471623908†L11-L12】</p>
+        <p>Daily updates on <strong>Sarkari Naukri, Sarkari Result, Admit Card, Answer Key</strong> aur <strong>CSC Services</strong> jaise Aadhaar, PAN, PM Kisan - sab ek jagah, official links ke saath.</p>
     </div>
 
     <div class="container">
         <main>
-            <!-- Latest Jobs -->
-            <div class="content-box">
+            <!-- Latest Jobs - REAL OFFICIAL LINKS -->
+            <div class="content-box" id="jobs">
                 <div class="box-header"><i class="fas fa-briefcase"></i> Latest Jobs</div>
                 <div class="box-body">
                     <ul>
-                        <li><a href="#">SSC CGL 2026 Online Form <span class="new-badge">NEW</span></a></li>
-                        <li><a href="#">UP Police Constable 60244 Post</a></li>
-                        <li><a href="#">Railway RRB NTPC Graduate Level</a></li>
-                        <li><a href="#">IBPS PO XIV Recruitment 2026</a></li>
-                        <li><a href="#">Army Agniveer Rally Bharti</a></li>
+                        <li><a href="https://ssc.nic.in/" target="_blank">SSC CGL 2026 Notification <span class="new-badge">NEW</span></a></li>
+                        <li><a href="https://uppbpb.gov.in/" target="_blank">UP Police Constable Recruitment</a></li>
+                        <li><a href="https://www.rrbcdg.gov.in/" target="_blank">Railway RRB NTPC Notification</a></li>
+                        <li><a href="https://www.ibps.in/" target="_blank">IBPS PO/MT Recruitment 2026</a></li>
+                        <li><a href="https://joinindianarmy.nic.in/" target="_blank">Indian Army Agniveer Rally</a></li>
                     </ul>
-                    <a href="#" class="view-all">View All Jobs →</a>
+                    <a href="https://www.employmentnews.gov.in/" target="_blank" class="view-all">View All Jobs →</a>
                 </div>
             </div>
 
-            <!-- Sarkari Result -->
+            <!-- Sarkari Result - REAL OFFICIAL LINKS -->
             <div class="content-box">
                 <div class="box-header"><i class="fas fa-poll"></i> Sarkari Result</div>
                 <div class="box-body">
                     <ul>
-                        <li><a href="#">SSC CHSL 2024 Final Result <span class="new-badge">NEW</span></a></li>
-                        <li><a href="#">UPSC IAS 2024 Mains Result</a></li>
-                        <li><a href="#">Railway Group D Result 2024</a></li>
-                        <li><a href="#">UPSSSC PET 2024 Result</a></li>
-                        <li><a href="#">Bihar Police Constable Result</a></li>
+                        <li><a href="https://ssc.nic.in/Portal/Results" target="_blank">SSC CHSL 2024 Final Result <span class="new-badge">NEW</span></a></li>
+                        <li><a href="https://upsc.gov.in/examinations/results" target="_blank">UPSC Civil Services Result</a></li>
+                        <li><a href="https://www.rrbcdg.gov.in/" target="_blank">Railway Group D Result</a></li>
+                        <li><a href="http://upsssc.gov.in/Results/ResultsAll.aspx" target="_blank">UPSSSC PET Result</a></li>
+                        <li><a href="https://www.bpsc.bih.nic.in/" target="_blank">Bihar BPSC Result</a></li>
                     </ul>
-                    <a href="#" class="view-all">View All Results →</a>
+                    <a href="https://sarkariresult.com.cm/" target="_blank" class="view-all">View All Results →</a>
                 </div>
             </div>
 
-            <!-- Admit Card -->
-            <div class="content-box">
+            <!-- Admit Card - REAL OFFICIAL LINKS -->
+            <div class="content-box" id="admit">
                 <div class="box-header"><i class="fas fa-id-card"></i> Admit Card</div>
                 <div class="box-body">
                     <ul>
-                        <li><a href="#">SSC GD 2026 Admit Card <span class="new-badge">NEW</span></a></li>
-                        <li><a href="#">IBPS Clerk XIV Prelims Admit Card</a></li>
-                        <li><a href="#">CTET January 2026 Admit Card</a></li>
-                        <li><a href="#">Delhi Police Constable Admit Card</a></li>
+                        <li><a href="https://ssc.nic.in/Portal/AdmitCard" target="_blank">SSC GD Constable Admit Card <span class="new-badge">NEW</span></a></li>
+                        <li><a href="https://www.ibps.in/" target="_blank">IBPS Clerk Admit Card</a></li>
+                        <li><a href="https://ctet.nic.in/" target="_blank">CTET Admit Card</a></li>
+                        <li><a href="https://delhipolice.gov.in/" target="_blank">Delhi Police Admit Card</a></li>
                     </ul>
-                    <a href="#" class="view-all">View All Admit Cards →</a>
+                    <a href="https://ssc.nic.in/Portal/AdmitCard" target="_blank" class="view-all">View All Admit Cards →</a>
                 </div>
             </div>
 
-            <!-- Sarkari Yojana Section -->
-            <div class="content-box">
+            <!-- Sarkari Yojana - REAL OFFICIAL LINKS -->
+            <div class="content-box" id="yojana">
                 <div class="box-header"><i class="fas fa-hand-holding-heart"></i> Sarkari Yojana</div>
                 <div class="yojana-grid">
                     <div class="yojana-card">
                         <h4>PM Kisan Yojana</h4>
                         <p>₹6,000 per year kisanon ke liye. Status check karein.</p>
-                        <a href="#">Apply Now</a>
+                        <a href="https://pmkisan.gov.in/" target="_blank">Official Website</a>
                     </div>
                     <div class="yojana-card">
-                        <h4>Ayushman Bharat</h4>
+                        <h4>Ayushman Bharat Yojana</h4>
                         <p>₹5 Lakh tak free ilaj. Card banwayein.</p>
-                        <a href="#">Check Eligibility</a>
+                        <a href="https://pmjay.gov.in/" target="_blank">Check Eligibility</a>
                     </div>
                     <div class="yojana-card">
                         <h4>PM Awas Yojana</h4>
                         <p>Garibon ke liye pakka makaan. Online aavedan.</p>
-                        <a href="#">Apply Online</a>
+                        <a href="https://pmaymis.gov.in/" target="_blank">Apply Online</a>
                     </div>
                     <div class="yojana-card">
                         <h4>Mudra Loan Yojana</h4>
                         <p>Swrojgar ke liye ₹10 lakh tak loan.</p>
-                        <a href="#">Details</a>
+                        <a href="https://www.mudra.org.in/" target="_blank">Details</a>
                     </div>
                 </div>
             </div>
         </main>
 
         <aside class="sidebar">
-            <!-- Answer Key -->
-            <div class="content-box">
+            <!-- Answer Key - REAL OFFICIAL LINKS -->
+            <div class="content-box" id="answer">
                 <div class="box-header"><i class="fas fa-key"></i> Answer Key</div>
                 <div class="box-body">
                     <ul>
-                        <li><a href="#">SSC CGL Tier 1 Answer Key</a></li>
-                        <li><a href="#">UP Police Constable Answer Key</a></li>
-                        <li><a href="#">CTET Answer Key 2024</a></li>
+                        <li><a href="https://ssc.nic.in/" target="_blank">SSC CGL Answer Key</a></li>
+                        <li><a href="https://uppbpb.gov.in/" target="_blank">UP Police Answer Key</a></li>
+                        <li><a href="https://ctet.nic.in/" target="_blank">CTET Answer Key</a></li>
                     </ul>
-                    <a href="#" class="view-all">View All →</a>
                 </div>
             </div>
 
-            <!-- CSC Services -->
-            <div class="content-box">
+            <!-- CSC Services - REAL OFFICIAL LINKS -->
+            <div class="content-box" id="csc">
                 <div class="box-header"><i class="fas fa-desktop"></i> CSC Services</div>
                 <div class="box-body">
                     <ul>
-                        <li><a href="#">Aadhaar Card Services</a></li>
-                        <li><a href="#">PAN Card Apply</a></li>
-                        <li><a href="#">E-Shram Card</a></li>
-                        <li><a href="#">Voter ID Card</a></li>
-                        <li><a href="#">Ration Card</a></li>
-                        <li><a href="#">Bhulekh / Land Records</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Important Links -->
-            <div class="content-box">
-                <div class="box-header"><i class="fas fa-link"></i> Important Links</div>
-                <div class="box-body">
-                    <ul>
-                        <li><a href="#">Syllabus</a></li>
-                        <li><a href="#">Previous Year Papers</a></li>
-                        <li><a href="#">Exam Calendar 2026</a></li>
-                        <li><a href="#">Free Job Alert</a></li>
+                        <li><a href="https://uidai.gov.in/" target="_blank">Aadhaar Card Services</a></li>
+                        <li><a href="https://www.pan.utiitsl.com/" target="_blank">PAN Card Apply</a></li>
+                        <li><a href="https://eshram.gov.in/" target="_blank">E-Shram Card</a></li>
+                        <li><a href="https://voters.eci.gov.in/" target="_blank">Voter ID Card</a></li>
+                        <li><a href="https://nfsa.gov.in/" target="_blank">Ration Card</a></li>
+                        <li><a href="https://upbhulekh.gov.in/" target="_blank">Bhulekh / Land Records</a></li>
                     </ul>
                 </div>
             </div>
@@ -513,56 +209,54 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Aashu Sarkari CSC</h4>
-                <p style="font-size: 0.9rem;">We provide instant updates for Sarkari Result, Jobs, Admit Card, Yojana in simple Hindi. Free for all.【2463532389471623908†L21-L22】</p>
+                <p style="font-size: 0.9rem;">We provide instant updates for Sarkari Result, Jobs, Admit Card, Yojana with official links. Free for all.</p>
             </div>
             <div class="footer-col">
-                <h4>Quick Links</h4>
+                <h4>Important Links</h4>
                 <ul>
-                    <li><a href="#">Sarkari Result</a></li>
-                    <li><a href="#">Latest Jobs</a></li>
-                    <li><a href="#">Admit Card</a></li>
-                    <li><a href="#">Answer Key</a></li>
+                    <li><a href="https://ssc.nic.in/" target="_blank">SSC Official</a></li>
+                    <li><a href="https://upsc.gov.in/" target="_blank">UPSC Official</a></li>
+                    <li><a href="https://www.ibps.in/" target="_blank">IBPS Official</a></li>
+                    <li><a href="https://www.india.gov.in/" target="_blank">India.gov.in</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Sarkari Yojana</h4>
                 <ul>
-                    <li><a href="#">PM Kisan Yojana</a></li>
-                    <li><a href="#">Ayushman Bharat</a></li>
-                    <li><a href="#">PM Awas Yojana</a></li>
-                    <li><a href="#">Mudra Loan</a></li>
+                    <li><a href="https://pmkisan.gov.in/" target="_blank">PM Kisan Yojana</a></li>
+                    <li><a href="https://pmjay.gov.in/" target="_blank">Ayushman Bharat</a></li>
+                    <li><a href="https://pmaymis.gov.in/" target="_blank">PM Awas Yojana</a></li>
+                    <li><a href="https://www.mudra.org.in/" target="_blank">Mudra Loan</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Contact</h4>
+                <h4>Disclaimer</h4>
                 <ul>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">We are not Government Website</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            © 2026 Aashu Sarkari CSC. All Rights Reserved. | Information should be free and accessible for all【2463532389471623908†L86-L87】
+            © 2026 Aashu Sarkari CSC. All Rights Reserved. | This is not an official Government Website
         </div>
     </footer>
 
     <script>
-        // Mobile Menu
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
 
-        // Search Enter
         document.querySelector('.search-box input').addEventListener('keypress', (e) => {
             if(e.key === 'Enter') {
-                alert('Searching for: ' + e.target.value);
+                window.open('https://www.google.com/search?q=' + encodeURIComponent(e.target.value + ' sarkari result'), '_blank');
             }
         });
     </script>
 
 </body>
-                        </html>
+                            </html>
