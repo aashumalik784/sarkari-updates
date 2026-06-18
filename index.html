@@ -3,43 +3,416 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aashu Sarkari Updates</title>
+    <title>Aashu Sarkari Updates | Latest Yojna & Govt Info</title>
+    <meta name="description" content="Sabhi sarkari yojnaon, bharti aur updates ki jaankari ek jagah. Fast aur trusted.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        /* Netflix Style Dark Theme */
-        body { 
-            background-color: #141414; 
-            color: white; 
-            font-family: 'Arial', sans-serif; 
-            margin: 0; 
-            padding: 0; 
+        :root {
+            --netflix-red: #e50914;
+            --dark-bg: #0a0a0a;
+            --card-bg: #141414;
+            --nav-bg: #000000;
+            --text-secondary: #b3b3b3;
         }
-        .hero { 
-            padding: 60px 20px; 
-            text-align: center; 
-            background: linear-gradient(to bottom, #000, #141414); 
-        }
-        h1 { color: #e50914; font-size: 2.5rem; margin-bottom: 10px; }
-        .content-section { padding: 20px; }
-        h2 { margin-left: 20px; color: #fff; }
         
-        /* Widget Styling */
-        rssapp-list { display: block; margin-top: 20px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            background-color: var(--dark-bg); 
+            color: #ffffff; 
+            font-family: 'Inter', 'Arial', sans-serif; 
+            line-height: 1.6;
+        }
+        
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 100%);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 12px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background: var(--nav-bg);
+        }
+        
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .logo {
+            color: var(--netflix-red);
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #e5e5e5;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: #fff;
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        /* Search Box */
+        .search-box {
+            position: relative;
+        }
+        
+        .search-box input {
+            background: rgba(0,0,0,0.7);
+            border: 1px solid #444;
+            color: #fff;
+            padding: 8px 40px 8px 16px;
+            border-radius: 4px;
+            width: 240px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: #fff;
+            background: rgba(0,0,0,0.9);
+            width: 280px;
+        }
+        
+        .search-box i {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            pointer-events: none;
+        }
+        
+        /* Settings Dropdown */
+        .settings-dropdown {
+            position: relative;
+        }
+        
+        .settings-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .settings-btn:hover {
+            transform: rotate(90deg);
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            right: 0;
+            top: 50px;
+            background: rgba(0,0,0,0.95);
+            border: 1px solid #333;
+            border-radius: 6px;
+            width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+        }
+        
+        .dropdown-menu.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            color: #e5e5e5;
+            text-decoration: none;
+            padding: 12px 16px;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        
+        .dropdown-menu a:hover {
+            background: #222;
+            color: #fff;
+        }
+        
+        .dropdown-menu i {
+            margin-right: 10px;
+            width: 18px;
+        }
+        
+        /* Mobile Menu */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero { 
+            padding: 140px 20px 80px; 
+            text-align: center; 
+            background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, var(--dark-bg) 100%), 
+                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600') center/cover;
+            border-bottom: 4px solid var(--netflix-red);
+        }
+        
+        .hero h1 { 
+            color: var(--netflix-red); 
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800; 
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        
+        .hero p { 
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(229, 9, 20, 0.15);
+            color: var(--netflix-red);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(229, 9, 20, 0.3);
+        }
+        
+        /* Content Section */
+        .content-section { 
+            padding: 40px 5%; 
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .section-header h2 { 
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .section-header .line {
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, var(--netflix-red), transparent);
+        }
+        
+        .widget-container {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        }
+        
+        rssapp-list { display: block; }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #737373;
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+            margin-top: 60px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: rgba(0,0,0,0.98);
+                width: 100%;
+                padding: 20px;
+                gap: 16px;
+                transition: left 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .search-box input {
+                width: 160px;
+            }
+            
+            .search-box input:focus {
+                width: 180px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .logo { font-size: 1.4rem; }
+            .search-box { display: none; }
+            .hero { padding: 120px 20px 60px; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="hero">
-        <h1>Aashu Sarkari Updates</h1>
-        <p>Sabhi sarkari yojnaon ki jaankari ek jagah.</p>
-    </div>
-
-    <div class="content-section">
-        <h2>Latest Yojna Updates</h2>
+    <!-- Navbar with Menu + Search + Settings -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-left">
+            <a href="#" class="logo">AASHU</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Yojna</a></li>
+                <li><a href="#">Bharti</a></li>
+                <li><a href="#">Result</a></li>
+                <li><a href="#">Documents</a></li>
+            </ul>
+        </div>
         
-        <!-- RSS Feed Widget -->
-        <script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
-        <rssapp-list id="ijbcKawhUVI4RzO5"></rssapp-list>
-    </div>
+        <div class="nav-right">
+            <div class="search-box">
+                <input type="text" placeholder="Yojna, Bharti search karein..." id="searchInput">
+                <i class="fas fa-search"></i>
+            </div>
+            
+            <div class="settings-dropdown">
+                <button class="settings-btn" id="settingsBtn">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#"><i class="fas fa-user"></i>Profile</a>
+                    <a href="#"><i class="fas fa-bell"></i>Notifications</a>
+                    <a href="#"><i class="fas fa-moon"></i>Dark Mode</a>
+                    <a href="#"><i class="fas fa-language"></i>Language</a>
+                    <a href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </div>
+            </div>
+            
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-badge">Trusted & Fast Updates</div>
+        <h1>Aashu Sarkari Updates</h1>
+        <p>Sabhi sarkari yojnaon, bharti, result aur documents ki latest jaankari ek jagah. Real-time updates.</p>
+    </header>
+
+    <main class="content-section">
+        <div class="section-header">
+            <h2>Latest Yojna Updates</h2>
+            <div class="line"></div>
+        </div>
+        
+        <div class="widget-container">
+            <script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
+            <rssapp-list id="ijbcKawhUVI4RzO5"></rssapp-list>
+        </div>
+    </main>
+    
+    <footer>
+        © 2026 Aashu Sarkari Updates. All rights reserved. | Fast & Reliable Sarkari Info
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Settings dropdown toggle
+        const settingsBtn = document.getElementById('settingsBtn');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        
+        settingsBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('show');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', () => {
+            dropdownMenu.classList.remove('show');
+        });
+        
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = hamburger.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        
+        // Search functionality - basic
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                alert('Searching for: ' + searchInput.value + '\nAbhi ye demo hai. RSS feed ke saath connect karna padega.');
+            }
+        });
+    </script>
 
 </body>
-</html>
+    </html>
