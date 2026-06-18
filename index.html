@@ -25,12 +25,12 @@
        .logo { color: #fff; font-size: 1.7rem; font-weight: 800; text-decoration: none; padding: 14px 0; }
        .nav-menu { display: flex; list-style: none; }
        .nav-menu li a { color: #fff; text-decoration: none; padding: 18px 16px; display: block; font-weight: 500; font-size: 0.92rem; }
-       .nav-menu li a:hover { background: rgba(0,0,0,0.2); }
+       .nav-menu li a:hover,.nav-menu li a.active { background: rgba(0,0,0,0.2); }
        .nav-right { display: flex; align-items: center; gap: 12px; }
        .search-box { position: relative; }
        .search-box input { padding: 8px 35px 8px 14px; border: none; border-radius: 3px; width: 250px; font-size: 0.9rem; }
        .search-box i { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #666; }
-       .hamburger { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; }
+       .hamburger { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
        .adsense-block { text-align: center; padding: 15px 5%; background: #fff; margin: 15px 5%; border: 1px solid var(--border); }
        .hero-notice { background: var(--notice-bg); border-left: 5px solid var(--notice-border); padding: 18px 5%; margin: 0 5% 20px; border-radius: 4px; }
        .hero-notice h2 { color: var(--primary-dark); font-size: 1.4rem; margin-bottom: 10px; font-weight: 700; }
@@ -56,9 +56,18 @@
        .footer-col ul { list-style: none; }
        .footer-col ul li { margin-bottom: 8px; }
        .footer-col ul li a { color: #aaa; text-decoration: none; font-size: 0.85rem; }
+       .footer-col ul li a:hover { color: #fff; }
        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #444; font-size: 0.8rem; }
         @media (max-width: 1100px) { .container { grid-template-columns: 1fr 1fr; } .sidebar { grid-column: 1 / -1; } }
-        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } .nav-menu { position: fixed; left: -100%; top: 60px; flex-direction: column; background: var(--primary); width: 100%; transition: left 0.3s; } .nav-menu.active { left: 0; } .hamburger { display: block; } .search-box { display: none; } .yojana-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { 
+            .container { grid-template-columns: 1fr; } 
+            .nav-menu { position: fixed; left: -100%; top: 60px; flex-direction: column; background: var(--primary); width: 100%; height: calc(100vh - 60px); overflow-y: auto; transition: left 0.3s; z-index: 999; } 
+            .nav-menu.active { left: 0; } 
+            .nav-menu li a { padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .hamburger { display: block; } 
+            .search-box { display: none; } 
+            .yojana-grid { grid-template-columns: 1fr; } 
+        }
     </style>
 </head>
 <body>
@@ -85,7 +94,7 @@
             </ul>
             <div class="nav-right">
                 <div class="search-box">
-                    <input type="text" placeholder="Search...">
+                    <input type="text" id="searchInput" placeholder="Search...">
                     <i class="fas fa-search"></i>
                 </div>
                 <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
@@ -230,6 +239,4 @@
                 <div class="yojana-card"><h4>Mahila Samman Savings</h4><p>Mahilaon ke liye 7.5% byaj</p><a href="https://www.indiapost.gov.in/" target="_blank">Open Account</a></div>
                 <div class="yojana-card"><h4>PM Garib Kalyan Anna Yojana</h4><p>Free ration 5kg per person</p><a href="https://nfsa.gov.in/" target="_blank">Check Status</a></div>
                 <div class="yojana-card"><h4>One Nation One Ration Card</h4><p>Desh me kahi bhi ration lo</p><a href="https://nfsa.gov.in/" target="_blank">Details</a></div>
-                <div class="yojana-card"><h4>Atal Pension Yojana</h4><p>60 saal ke baad ₹1000-5000 pension</p><a href="https://www.npscra.nsdl.co.in/scheme-details.php" target="_blank">Join Now</a></div>
-                <div class="yojana-card"><h4>PM Shram Yogi Maandhan</h4><p>Mazdooron ke liye ₹3000 pension</p><a href="https://maandhan.in/" target="_blank">Register</a></div>
-                <div class="yojana-card"><h4>National Pension Scheme</h4><p>Retirement ke liye pension scheme</p><a href="https://www.npscra.nsdl.co.in/"
+                <div class="yojana-card"><h4>Atal Pension Yojana</h4><p>60 saal ke baad ₹1000-5000 pension</p><a href="https://www.npscra.nsdl.co.in/scheme-details.php" target="_bla
